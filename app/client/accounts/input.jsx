@@ -21,12 +21,15 @@ Input = React.createClass({
         var classes = cx({
             'focused': this.state.focused,
             'has-value': !this.state.empty,
-            'input-container': true
+            'input-container': true,
+            'half': (this.props.width == "half")
         })
         return (
             <div className={classes}>
                 <label forHTML={this.props.id}>{this.props.label}</label>
                 <input
+                    autoComplete="false"
+                    spellCheck="false"
                     onFocus={this.focus}
                     onBlur={this.blur}
                     type={this.props.type}

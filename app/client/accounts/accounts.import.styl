@@ -18,24 +18,49 @@
         text-transform uppercase
         letter-spacing 0.1em
         text-align center
-        font-weight bold
+        color #333
+        font-size 1em
+        margin-bottom 0.5em
     .accounts-form
         position absolute
         background white
-        padding 1em 3em
+        padding 2em 3em
         width 400px
         top 50%
         left 50%
         transform translate(-50%, -50%)
+        button
+            padding 10px
+            color white
+            outline none
+            border none
+            background blue
+            text-transform uppercase
+            letter-spacing 0.1em
+            margin 10px 0
+            width 100%
+            font-weight bold
+            transition all 200ms ease-out
+            cursor pointer
+            &:hover
+                background darken(blue, 20%)
+                transition all 200ms ease-out
     .input-container
         width 100%
         position relative
         margin 20px 0
+        &.half
+            width 48%
+            margin 0
+            display inline-block
+            &:first-of-type
+                margin-right 4%
         label
             position absolute
             top 50%
             left 0
-            transform translateY(-50%)
+            background transparent
+            transform translate3d(0, -50%, 0)
             text-transform uppercase
             letter-spacing 0.1em
             font-size 0.6em
@@ -49,10 +74,12 @@
             background transparent
             border-bottom 1px solid blue
             padding 10px 0
+            font-size 14px
+            overflow visible
         &.focused, &.has-value
             label
                 color blue
-                transform translateY(-250%)
+                transform translate3d(0, -250%, 0)
                 transition all 200ms ease-out
 
 
